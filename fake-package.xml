@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:repository xmlns:ns2="http://schemas.android.com/repository/android/common/01" xmlns:ns3="http://schemas.android.com/repository/android/generic/01" xmlns:ns4="http://schemas.android.com/sdk/android/repo/addon2/01" xmlns:ns5="http://schemas.android.com/sdk/android/repo/repository2/01" xmlns:ns6="http://schemas.android.com/sdk/android/repo/sys-img2/01">
+    <license id="android-sdk-license" type="text">Dummy</license>
+    <localPackage path="emulator" obsolete="false">
+        <type-details xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns3:genericDetailsType" />
+        <revision>
+            <major>30</major>
+            <minor>6</minor>
+            <micro>5</micro>
+        </revision>
+        <display-name>Android Emulator</display-name>
+        <uses-license ref="android-sdk-license" />
+        <dependencies>
+            <dependency path="patcher;v4" />
+        </dependencies>
+    </localPackage>
+</ns2:repository>
