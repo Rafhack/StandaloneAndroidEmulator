@@ -22,7 +22,7 @@ Este repositório tem como objetivo realizar a instalação e confuguração aut
 
 3. **Script de automação e ferramentas**
 
-    O script de automação irá realizar todos os passos necessários para a instalação e configuração do emulador. [Faça o download aqui]() ou se preferir, use o `git` para clonar este repositório na máquina local.<br><br>
+    O script de automação irá realizar todos os passos necessários para a instalação e configuração do emulador. [Faça o download aqui](https://github.com/Rafhack/StandaloneAndroidEmulator/archive/refs/heads/master.zip) ou se preferir, use o `git` para clonar este repositório na máquina local.<br><br>
 
 ## Configuração do ambiente
 Após o download e instalalção das dependências citadas acima, é necessário configurar o ambiente para as ferramentas e emulador do Android
