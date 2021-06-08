@@ -20,6 +20,21 @@ MOVE /Y cmdline-tools\bin %LATEST_DIR%
 MOVE /Y cmdline-tools\lib %LATEST_DIR%) >NUL 2>&1
 
 PUSHD %LATEST_DIR%\bin
+
+SET PATCH_FILE=sdkmanager.bat.PATCH
+IF EXIST %PATCH_FILE% goto Install
+
+COPY /Y NUL %PATCH_FILE% >NUL 2>&1
+FOR /F "delims=" %%a IN ('type sdkmanager.bat') do (
+    echo.%%a | findstr /C:"set DEFAULT_JVM_OPTS">nul && (
+        echo/set DEFAULT_JVM_OPTS=-Dcom.android.sdklib.toolsdir="%%~dp0\..">> %PATCH_FILE%
+     ) || (
+        echo/%%a>> %PATCH_FILE%
+     )
+)
+COPY /Y %PATCH_FILE% sdkmanager.bat >NUL 2>&1
+
+:Install
 ECHO yes|sdkmanager --install "emulator" 2>NUL
 IF %ERRORLEVEL% EQU 1 CALL:DownloadEmulator
 ECHO yes|sdkmanager --install "%IMAGE%"
