@@ -20,19 +20,8 @@ MOVE /Y cmdline-tools\bin %LATEST_DIR%
 MOVE /Y cmdline-tools\lib %LATEST_DIR%) >NUL 2>&1
 
 PUSHD %LATEST_DIR%\bin
-
-SET PATCH_FILE=sdkmanager.bat.PATCH
-IF EXIST %PATCH_FILE% goto Install
-
-COPY /Y NUL %PATCH_FILE% >NUL 2>&1
-FOR /F "delims=" %%a IN ('type sdkmanager.bat') do (
-    echo.%%a | findstr /C:"set DEFAULT_JVM_OPTS">nul && (
-        echo/set DEFAULT_JVM_OPTS=-Dcom.android.sdklib.toolsdir="%%~dp0\..">> %PATCH_FILE%
-     ) || (
-        echo/%%a>> %PATCH_FILE%
-     )
-)
-COPY /Y %PATCH_FILE% sdkmanager.bat >NUL 2>&1
+CALL:PatchSDKFile sdkmanager.bat sdklib
+CALL:PatchSDKFile avdmanager.bat sdkmanager
 
 :Install
 ECHO yes|sdkmanager --install "emulator" 2>NUL
@@ -46,6 +35,21 @@ POPD
 PUSHD emulator
 emulator @%AVD_NAME% -no-boot-anim -netdelay none -no-snapshot -skin 400x800 >NUL 2>&1
 POPD
+EXIT /b
+
+:PatchSDKFile
+SET PATCH_FILE=%1.PATCH
+IF EXIST %PATCH_FILE% EXIT /b
+
+COPY /Y NUL %PATCH_FILE% >NUL 2>&1
+FOR /F "delims=" %%a IN ('type %1') do (
+    echo.%%a | findstr /C:"set DEFAULT_JVM_OPTS">nul && (
+        echo/set DEFAULT_JVM_OPTS=-Dcom.android.%2.toolsdir="%%~dp0\..">> %PATCH_FILE%
+     ) || (
+        echo/%%a>> %PATCH_FILE%
+     )
+)
+COPY /Y %PATCH_FILE% %1 >NUL 2>&1
 EXIT /b
 
 :DownloadEmulator
