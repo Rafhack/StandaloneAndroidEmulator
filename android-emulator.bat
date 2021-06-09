@@ -28,8 +28,8 @@ ECHO yes|sdkmanager --install "emulator" 2>NUL
 IF %ERRORLEVEL% EQU 1 CALL:DownloadEmulator
 ECHO yes|sdkmanager --install "%IMAGE%"
 ECHO yes|sdkmanager "platform-tools" "platforms;android-%API%"
-ECHO no|avdmanager -s create avd --force --name "%AVD_NAME%" --package "%IMAGE%" --abi "%BIN_INTERFACE%" >NUL
-ECHO hw.keyboard=yes >> %USERPROFILE%\.android\avd\%AVD_NAME%.avd\config.ini
+ECHO no|avdmanager -s create avd --name "%AVD_NAME%" --package "%IMAGE%" --abi "%BIN_INTERFACE%"
+ECHO hw.keyboard=yes >> "%USERPROFILE%\.android\avd\%AVD_NAME%.avd\config.ini"
 POPD
 
 PUSHD emulator
