@@ -39,7 +39,9 @@ Ao realizar estes passos, a estrutura da pasta criada deve estar como a seguir:
 <br>
 
 ## Instalação do emulador
-Com o ambiente configurado, basta apenas executar o script de instalação. Para isso **execute como administrador** o arquivo `android-emulator.bat`. O script irá fazer download e instalação dos arquivos necessários, e ao final do processo, irá executar o emulador do Android.<br><br>
+Com o ambiente configurado, basta apenas executar o script de instalação. Para isso execute o arquivo `android-emulator.bat`. O script irá fazer download e instalação dos arquivos necessários, e ao final do processo, irá executar o emulador do Android.
+<br>
+Para executar o emulador daqui em diante, basta executar o arquivo `android-emulator.bat`<br><br>
 
 ## Configurações adicionais
 É possível alterar configurações como versão do Android e nome do emulador. Para alterar tais configurações, basta editar o arquivo `android-emulator.bat` em qualquer editor de textos.<br><br>
