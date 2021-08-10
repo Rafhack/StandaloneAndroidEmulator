@@ -14,19 +14,19 @@ Este repositório tem como objetivo realizar a instalação e confuguração aut
 ### Instalação de dependências
 1. **JDK**
 
-    É necessário ter uma instalação do JDK (Java Development Kit) na máquina para o funcionamento das ferramentas de linha de comando do Android. Para isso [faça o download do JDK](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html) e siga os passos de instalação normalmente.
+    É necessário ter uma instalação do JDK (Java Development Kit) na máquina para o funcionamento das ferramentas de linha de comando do Android. Para isso [faça o download do JDK](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html){:target="_blank"} e siga os passos de instalação normalmente.
 
 2. **Android SDK Command Line Tools**
 
-    Para realizar a instalação do emulador, as ferramentas de linha de comando do Android são necessárias. [Faça o download aqui](https://developer.android.com/studio#cmdline-tools) e siga para os próximos passos.
+    Para realizar a instalação do emulador, as ferramentas de linha de comando do Android são necessárias. [Faça o download aqui](https://developer.android.com/studio#cmdline-tools){:target="_blank"} e siga para os próximos passos.
     
 3. **Intel HAXM**
 
-    Em alguns sistemas, é necessária a instalação do motor de virtualização da Intel. [Faça o download aqui](https://github.com/intel/haxm/releases/tag/v7.7.0) e siga para os próximos passos.
+    Em alguns sistemas, é necessária a instalação do motor de virtualização da Intel. [Faça o download aqui](https://github.com/intel/haxm/releases/tag/v7.7.0){:target="_blank"} e siga para os próximos passos.
 
 3. **Script de automação e ferramentas**
 
-    O script de automação irá realizar todos os passos necessários para a instalação e configuração do emulador. [Faça o download aqui](https://github.com/Rafhack/StandaloneAndroidEmulator/archive/refs/heads/master.zip) ou se preferir, use o `git` para clonar este repositório na máquina local.<br><br>
+    O script de automação irá realizar todos os passos necessários para a instalação e configuração do emulador. [Faça o download aqui](https://github.com/Rafhack/StandaloneAndroidEmulator/archive/refs/heads/master.zip){:target="_blank"} ou se preferir, use o `git` para clonar este repositório na máquina local.<br><br>
 
 ## Configuração do ambiente
 Após o download e instalalção das dependências citadas acima, é necessário configurar o ambiente para as ferramentas e emulador do Android
@@ -54,6 +54,6 @@ Para executar o emulador daqui em diante, basta executar o arquivo `android-emul
 ```bat
 SET API=23
 ```
-##### Consulte as [referência de versões e níveis de API](https://source.android.com/setup/start/build-numbers#platform-code-names-versions-api-levels-and-ndk-releases)<br><br>
+##### Consulte as [referência de versões e níveis de API](https://source.android.com/setup/start/build-numbers#platform-code-names-versions-api-levels-and-ndk-releases){:target="_blank"}<br><br>
 
 * Para alterar o nome do emulador, altere a variável `AVD_NAME` para o nome desejado. Assim é possível manter diversos emuladores com configurações específicas.
