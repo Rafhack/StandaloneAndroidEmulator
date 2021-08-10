@@ -9,7 +9,7 @@ Tabela de conteúdos
 
 
 ## Objetivo
-Este repositório tem como objetivo realizar a instalação e confuguração automatizada do emulador do Android de forma _standalone_, ou seja, sem a necessidade da instalação do Android Studio.<br>O emulador do Android pode ser considerado como uma instalação limpa do sistema, logo, oferece maior confiabilidade em comparação com instalações de emuladores de terceiros.<br><br>
+Este repositório tem como objetivo realizar a instalação e configuração automatizada do emulador do Android de forma _standalone_, ou seja, sem a necessidade da instalação do Android Studio.<br>O emulador do Android pode ser considerado como uma instalação limpa do sistema, logo, oferece maior confiabilidade em comparação com instalações de emuladores de terceiros.<br><br>
 
 ### Instalação de dependências
 1. **JDK**
@@ -29,7 +29,7 @@ Este repositório tem como objetivo realizar a instalação e confuguração aut
     O script de automação irá realizar todos os passos necessários para a instalação e configuração do emulador. [Faça o download aqui](https://github.com/Rafhack/StandaloneAndroidEmulator/archive/refs/heads/master.zip) ou se preferir, use o `git` para clonar este repositório na máquina local.<br><br>
 
 ## Configuração do ambiente
-Após o download e instalalção das dependências citadas acima, é necessário configurar o ambiente para as ferramentas e emulador do Android
+Após o download e instalação das dependências citadas acima, é necessário configurar o ambiente para as ferramentas e emulador do Android
 * Crie uma pasta com um nome e local de escolha e extraia para dentro dela a pasta `cmdline-tools` contida no _Command Line Tools_ baixado anteriormente.
 * Mova ou extraia os arquivos baixados deste repositório para a pasta criada.
 
@@ -54,6 +54,6 @@ Para executar o emulador daqui em diante, basta executar o arquivo `android-emul
 ```bat
 SET API=23
 ```
-##### Consulte as [referência de versões e níveis de API](https://source.android.com/setup/start/build-numbers#platform-code-names-versions-api-levels-and-ndk-releases){:target="_blank"}<br><br>
+##### Consulte as [referência de versões e níveis de API](https://source.android.com/setup/start/build-numbers#platform-code-names-versions-api-levels-and-ndk-releases)<br><br>
 
 * Para alterar o nome do emulador, altere a variável `AVD_NAME` para o nome desejado. Assim é possível manter diversos emuladores com configurações específicas.
