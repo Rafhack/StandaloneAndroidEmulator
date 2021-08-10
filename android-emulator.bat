@@ -28,7 +28,7 @@ ECHO yes|sdkmanager --install "emulator" 2>NUL
 IF %ERRORLEVEL% EQU 1 CALL:DownloadEmulator
 ECHO yes|sdkmanager --install "%IMAGE%"
 ECHO yes|sdkmanager "platform-tools" "platforms;android-%API%"
-ECHO no|avdmanager -s create avd --name "%AVD_NAME%" --package "%IMAGE%" --abi "%BIN_INTERFACE%"
+ECHO no|avdmanager -s create avd --name "%AVD_NAME%" --package "%IMAGE%" --abi "%BIN_INTERFACE%" 2>NUL
 ECHO hw.keyboard=yes >> "%USERPROFILE%\.android\avd\%AVD_NAME%.avd\config.ini"
 POPD
 
