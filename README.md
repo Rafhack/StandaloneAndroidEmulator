@@ -19,6 +19,10 @@ Este repositório tem como objetivo realizar a instalação e confuguração aut
 2. **Android SDK Command Line Tools**
 
     Para realizar a instalação do emulador, as ferramentas de linha de comando do Android são necessárias. [Faça o download aqui](https://developer.android.com/studio#cmdline-tools) e siga para os próximos passos.
+    
+3. **Intel HAXM**
+
+    Em alguns sistemas, é necessária a instalação do motor de virtualização da Intel. [Faça o download aqui](https://github.com/intel/haxm/releases/tag/v7.7.0) e siga para os próximos passos.
 
 3. **Script de automação e ferramentas**
 
