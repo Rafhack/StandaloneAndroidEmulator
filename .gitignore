@@ -1,0 +1,8 @@
+.knownPackages
+cmdline-tools/
+emulator/
+licenses/
+patcher/
+platform-tools/
+platforms/
+system-images/
